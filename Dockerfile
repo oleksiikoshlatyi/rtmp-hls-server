@@ -12,7 +12,7 @@ ARG  FFMPEG_VERSION=4.2.1
 # Install dependencies
 RUN apt-get update && \
 	apt-get install -y \
-		wget build-essential ca-certificates \
+		htop wget build-essential ca-certificates \
 		openssl libssl-dev yasm \
 		libpcre3-dev librtmp-dev libtheora-dev \
 		libvorbis-dev libvpx-dev libfreetype6-dev \
