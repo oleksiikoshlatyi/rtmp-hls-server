@@ -12,7 +12,7 @@ ARG  FFMPEG_VERSION=4.2.1
 # Install dependencies
 RUN apt-get update && \
 	apt-get install -y \
-		htop wget build-essential ca-certificates \
+		wget build-essential ca-certificates \
 		openssl libssl-dev yasm \
 		libpcre3-dev librtmp-dev libtheora-dev \
 		libvorbis-dev libvpx-dev libfreetype6-dev \
@@ -89,7 +89,7 @@ RUN apt-get update && \
 	apt-get install -y \
 		ca-certificates openssl libpcre3-dev \
 		librtmp1 libtheora0 libvorbis-dev \
-		libvpx4 libx264-dev libx265-dev && \
+		libvpx4 libx264-dev libx265-dev htop && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy files from build stage to final stage	
