@@ -59,6 +59,8 @@ RUN cd /tmp/build && \
 RUN cd /tmp/build/ffmpeg-${FFMPEG_VERSION} && \
   ./configure \
 	  --enable-version3 \
+	  --enable-nonfree \
+	  --enable-openssl \
 	  --enable-gpl \
 	  --enable-small \
 	  --enable-libx264 \
@@ -89,7 +91,7 @@ RUN apt-get update && \
 	apt-get install -y \
 		ca-certificates openssl libpcre3-dev \
 		librtmp1 libtheora0 libvorbis-dev \
-		libvpx4 libx264-dev libx265-dev htop && \
+		libvpx4 libx264-dev libx265-dev htop less && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy files from build stage to final stage	
